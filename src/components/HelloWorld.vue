@@ -1,7 +1,10 @@
-<script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-facing-decorator'
+
+@Component
+export default class HelloWorld extends Vue {
+  @Prop() msg!: string
+}
 </script>
 
 <template>
